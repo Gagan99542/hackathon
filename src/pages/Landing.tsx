@@ -17,9 +17,9 @@ export default function Landing() {
       </div>
       <div className="toggle">
         <ToggleColorMode />
-      </div>
-      <div className="radio">
-        <RadioButtonGroup />
+        <div className="radio">
+          <RadioButtonGroup />
+        </div>
       </div>
     </div>
   );
