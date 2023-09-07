@@ -1,4 +1,5 @@
 import image from "../ccc.svg";
+import MultipleSelectChip from "./MultipleSelectChip";
 import RadioButtonGroup from "./RadioButtonGroup";
 import ToggleColorMode from "./ToggleColorMode";
 import "./TopNav.css";
@@ -20,6 +21,9 @@ export default function Landing() {
       </div>
       <div className="radio">
         <RadioButtonGroup />
+      </div>
+      <div className="select">
+        <MultipleSelectChip />
       </div>
     </div>
   );
