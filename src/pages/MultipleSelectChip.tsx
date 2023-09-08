@@ -7,6 +7,8 @@ import OutlinedInput from "@mui/material/OutlinedInput";
 import Select, { SelectChangeEvent } from "@mui/material/Select";
 import { Theme, useTheme } from "@mui/material/styles";
 import * as React from "react";
+import { ComputeServices } from "../constants/data/compute-services";
+import { NetworkServices } from "../constants/data/network-services";
 
 const ITEM_HEIGHT = 48;
 const ITEM_PADDING_TOP = 8;
@@ -18,15 +20,6 @@ const MenuProps = {
     },
   },
 };
-
-const compute = ["Virtual Machine", "Azure Functions", "Azure App Service"];
-
-const network = [
-  "virtual network",
-  "Load Balancer",
-  "Application Gateway",
-  "Front Door",
-];
 
 function getStyles(name: string, personName: readonly string[], theme: Theme) {
   return {
@@ -69,7 +62,7 @@ export default function MultipleSelectChip() {
             )}
             MenuProps={MenuProps}
           >
-            {compute.map((name) => (
+            {ComputeServices.map((name) => (
               <MenuItem
                 key={name}
                 value={name}
@@ -100,7 +93,38 @@ export default function MultipleSelectChip() {
             )}
             MenuProps={MenuProps}
           >
-            {network.map((name) => (
+            {NetworkServices.map((name) => (
+              <MenuItem
+                key={name}
+                value={name}
+                style={getStyles(name, personName, theme)}
+              >
+                {name}
+              </MenuItem>
+            ))}
+          </Select>
+        </FormControl>
+      </div>
+      <div>
+        <FormControl sx={{ m: 1, width: 300 }}>
+          <InputLabel id="demo-multiple-chip-label">Network Service</InputLabel>
+          <Select
+            labelId="demo-multiple-chip-label"
+            id="demo-multiple-chip"
+            multiple
+            value={personName}
+            onChange={handleChange}
+            input={<OutlinedInput id="select-multiple-chip" label="Chip" />}
+            renderValue={(selected) => (
+              <Box sx={{ display: "flex", flexWrap: "wrap", gap: 0.5 }}>
+                {selected.map((value) => (
+                  <Chip key={value} label={value} />
+                ))}
+              </Box>
+            )}
+            MenuProps={MenuProps}
+          >
+            {NetworkServices.map((name) => (
               <MenuItem
                 key={name}
                 value={name}

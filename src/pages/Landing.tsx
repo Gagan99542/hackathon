@@ -1,6 +1,7 @@
 import image from "../ccc.svg";
+import ResourceWrapper from "../components/ResourceWrapper";
 import MultipleSelectChip from "./MultipleSelectChip";
-import RadioButtonGroup from "./RadioButtonGroup";
+// import RadioButtonGroup from "./RadioButtonGroup";
 import ToggleColorMode from "./ToggleColorMode";
 import "./TopNav.css";
 
@@ -19,11 +20,14 @@ export default function Landing() {
       <div className="toggle">
         <ToggleColorMode />
       </div>
-      <div className="radio">
+      {/* <div className="radio">
         <RadioButtonGroup />
-      </div>
+      </div> */}
       <div className="select">
         <MultipleSelectChip />
+      </div>
+      <div>
+        <ResourceWrapper />
       </div>
     </div>
   );
