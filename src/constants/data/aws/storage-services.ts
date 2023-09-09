@@ -1,1 +1,1 @@
-export const StorageServices = ["Storage Account", "Managed Disk"];
+export const StorageServices = ["S3", "EBS Volume"];

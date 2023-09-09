@@ -4,12 +4,14 @@ import Box from "@mui/material/Box";
 import IconButton from "@mui/material/IconButton";
 import { ThemeProvider, createTheme, useTheme } from "@mui/material/styles";
 import * as React from "react";
+import "./styling.css";
 
 const ColorModeContext = React.createContext({ toggleColorMode: () => {} });
 
 function MyApp() {
   const theme = useTheme();
   const colorMode = React.useContext(ColorModeContext);
+  console.log(theme.palette.mode);
   return (
     <Box
       sx={{

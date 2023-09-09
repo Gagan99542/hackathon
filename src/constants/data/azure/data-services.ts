@@ -1,1 +1,1 @@
-export const DataServices = ["SQL Database", "Postgres"];
+export const AzureDataServices = ["SQL Database", "Postgres"];

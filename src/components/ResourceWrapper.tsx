@@ -1,9 +1,9 @@
 import Box from "@mui/material/Box";
 import Tab from "@mui/material/Tab";
 import Tabs from "@mui/material/Tabs";
+import { useTheme } from "@mui/material/styles";
 import * as React from "react";
-import AWSResources from "./AWSResources";
-import AzureResources from "./AzureResources";
+import MultipleSelectChip from "../pages/MultipleSelectChip";
 import ResourceTabPanel from "./ResourceTabPanel";
 
 function a11yProps(index: number) {
@@ -13,7 +13,11 @@ function a11yProps(index: number) {
   };
 }
 
+const ColorModeContext = React.createContext({ toggleColorMode: () => {} });
+
 export default function ResourceWrapper() {
+  const theme = useTheme();
+  const colorMode = React.useContext(ColorModeContext);
   const [value, setValue] = React.useState(0);
 
   const handleChange = (event: React.SyntheticEvent, newValue: number) => {
@@ -33,10 +37,10 @@ export default function ResourceWrapper() {
         </Tabs>
       </Box>
       <ResourceTabPanel value={value} index={0}>
-        <AzureResources />
+        <MultipleSelectChip value={0} />
       </ResourceTabPanel>
       <ResourceTabPanel value={value} index={1}>
-        <AWSResources />
+        <MultipleSelectChip value={1} />
       </ResourceTabPanel>
     </Box>
   );

@@ -1,5 +1,5 @@
 export const ComputeServices = [
-  "Virtual Machine",
-  "Azure Functions",
-  "Azure App Service",
+  "Elastic Compute2",
+  "Lambda",
+  "Elastic Beanstalk",
 ];

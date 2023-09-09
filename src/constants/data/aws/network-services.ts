@@ -1,6 +1,5 @@
 export const NetworkServices = [
-  "virtual network",
+  "VPC",
   "Load Balancer",
-  "Application Gateway",
-  "Front Door",
+  "Cloud Front",
 ];

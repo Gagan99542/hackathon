@@ -1,1 +1,1 @@
-export const StorageServices = ["Storage Account", "Managed Disk"];
+export const AzureStorageServices = ["Storage Account", "Managed Disk"];
