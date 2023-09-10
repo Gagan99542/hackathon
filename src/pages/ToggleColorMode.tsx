@@ -11,7 +11,7 @@ const ColorModeContext = React.createContext({ toggleColorMode: () => {} });
 function MyApp() {
   const theme = useTheme();
   const colorMode = React.useContext(ColorModeContext);
-  console.log(theme.palette.mode);
+  // console.log(theme.palette.mode);
   return (
     <Box
       sx={{

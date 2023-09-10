@@ -1,5 +1,1 @@
-export const NetworkServices = [
-  "VPC",
-  "Load Balancer",
-  "Cloud Front",
-];
+export const NetworkServices = ["VPC", "Load Balancer", "Cloud Front"];
