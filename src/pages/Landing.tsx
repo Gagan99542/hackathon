@@ -1,5 +1,5 @@
 import image from "../ccc.svg";
-import RadioButtonGroup from "./RadioButtonGroup";
+import ResourceWrapper from "../components/ResourceWrapper";
 import ToggleColorMode from "./ToggleColorMode";
 import "./TopNav.css";
 
@@ -12,14 +12,13 @@ export default function Landing() {
           <div className="img">
             <img src={image} alt="Cloud Cost Comparator" />
           </div>
-          {/* <div className="BasicSwitches"></div> */}
+        </div>
+        <div className="mode">
+          <ToggleColorMode />
         </div>
       </div>
-      <div className="toggle">
-        <ToggleColorMode />
-      </div>
-      <div className="radio">
-        <RadioButtonGroup />
+      <div>
+        <ResourceWrapper />
       </div>
     </div>
   );
