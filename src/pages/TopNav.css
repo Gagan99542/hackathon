@@ -1,0 +1,28 @@
+.top-navbar {
+  background-color: cornflowerblue;
+  padding: 10px 15px;
+  border: 1px;
+  border-style: dashed;
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav-title {
+  display: flex;
+  width: 300px;
+  font-size: 24px;
+  font-stretch: narrower;
+  text-align: left;
+  text-decoration: dimgrey;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.img {
+  background-image: image;
+  backface-visibility: hidden;
+}
+
+/* .side-content-center {
+    display: flex;
+    align-items: center;
+} */
